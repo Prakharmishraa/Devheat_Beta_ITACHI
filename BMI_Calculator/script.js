@@ -1,37 +1,73 @@
-document.getElementById('calculateBtn').addEventListener('click', calculateBMI);
+var age = document.getElementById("age");
+var height = document.getElementById("height");
+var weight = document.getElementById("weight");
+var male = document.getElementById("m");
+var female = document.getElementById("f");
+var form = document.getElementById("form");
+let resultArea = document.querySelector(".comment");
 
-document.getElementById('infoBtn').addEventListener('click', toggleInfo);
-
-function calculateBMI() {
-    const weight = parseFloat(document.getElementById('weight').value);
-    const height = parseFloat(document.getElementById('height').value) / 100; // Convert height to meters
-
-    if (isNaN(weight) || isNaN(height)) {
-        document.getElementById('result').textContent = 'Please enter valid values for weight and height.';
-        return;
-    }
-
-    const bmi = weight / (height * height);
-    const bmiResult = bmi.toFixed(2);
-
-    let interpretation = '';
-
-    if (bmi < 18.5) {
-        interpretation = 'Underweight';
-    } else if (bmi < 24.9) {
-        interpretation = 'Normal Weight';
-    } else if (bmi < 29.9) {
-        interpretation = 'Overweight';
-    } else {
-        interpretation = 'Obese';
-    }
+modalContent = document.querySelector(".modal-content");
+modalText = document.querySelector("#modalText");
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
 
 
-    const resultText = `Your BMI is ${bmiResult}. You are categorized as ${interpretation}.`;
-    document.getElementById('result').textContent = resultText;
+function calculate(){
+ 
+  if(age.value=='' || height.value=='' || weight.value=='' || (male.checked==false && female.checked==false)){
+    modal.style.display = "block";
+    modalText.innerHTML = `All fields are required!`;
+
+  }else{
+    countBmi();
+  }
+
 }
 
-function toggleInfo() {
-    const infoDiv = document.getElementById('info');
-    infoDiv.classList.toggle('hidden');
+
+function countBmi(){
+  var p = [age.value, height.value, weight.value];
+  if(male.checked){
+    p.push("male");
+  }else if(female.checked){
+    p.push("female");
+  }
+
+  var bmi = Number(p[2])/(Number(p[1])/100*Number(p[1])/100);
+      
+  var result = '';
+  if(bmi<18.5){
+    result = 'Underweight';
+     }else if(18.5<=bmi&&bmi<=24.9){
+    result = 'Healthy';
+     }else if(25<=bmi&&bmi<=29.9){
+    result = 'Overweight';
+     }else if(30<=bmi&&bmi<=34.9){
+    result = 'Obese';
+     }else if(35<=bmi){
+    result = 'Extremely obese';
+     }
+
+
+
+resultArea.style.display = "block";
+document.querySelector(".comment").innerHTML = `You are <span id="comment">${result}</span>`;
+document.querySelector("#result").innerHTML = bmi.toFixed(2);
+
+}
+
+
+
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
