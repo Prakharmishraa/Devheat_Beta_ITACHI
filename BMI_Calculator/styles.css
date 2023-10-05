@@ -84,3 +84,25 @@ button:hover {
         opacity: 1;
     }
 }
+
+#infoBtn {
+    background-color: #333;
+    /* Dark button color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Button color transition effect */
+    margin-top: 10px;
+}
+
+#infoBtn:hover {
+    background-color: #555;
+    /* Darker color on hover */
+}
+
+.hidden {
+    display: none;
+}

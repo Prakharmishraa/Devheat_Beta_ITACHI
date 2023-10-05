@@ -1,5 +1,7 @@
 document.getElementById('calculateBtn').addEventListener('click', calculateBMI);
 
+document.getElementById('infoBtn').addEventListener('click', toggleInfo);
+
 function calculateBMI() {
     const weight = parseFloat(document.getElementById('weight').value);
     const height = parseFloat(document.getElementById('height').value) / 100; // Convert height to meters
@@ -24,6 +26,12 @@ function calculateBMI() {
         interpretation = 'Obese';
     }
 
+
     const resultText = `Your BMI is ${bmiResult}. You are categorized as ${interpretation}.`;
     document.getElementById('result').textContent = resultText;
+}
+
+function toggleInfo() {
+    const infoDiv = document.getElementById('info');
+    infoDiv.classList.toggle('hidden');
 }
