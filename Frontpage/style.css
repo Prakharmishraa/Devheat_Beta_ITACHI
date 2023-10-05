@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
 :root {
-    --blue: #17009a;
+    --blue: #c7c6cd;
 }
 
 * {
@@ -27,8 +27,8 @@ html {
 
 .btn {
     cursor: pointer;
-    border: .2rem solid var(--blue);
-    color: var(--blue);
+    border: .2rem solid rgba(0, 119, 255, 0.708);
+    color: rgba(0, 119, 255, 0.708);
     background: none;
     padding: .5rem 3rem;
     margin-top: 1rem;
@@ -44,7 +44,7 @@ html {
     left: 0;
     height: 100%;
     width: 100%;
-    background: var(--blue);
+    background: rgba(0, 50, 108, 0.708);
     z-index: -1;
     clip-path: circle(0% at 0% 0%);
     transition: .3s;
@@ -129,7 +129,7 @@ header.header-active .navbar a {
 
 .home {
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 119, 255, 0.708), rgba(0, 0, 0, 0.822)), url(../images/home.jpg) no-repeat;
+    background: linear-gradient(rgba(0, 119, 255, 0.708), rgba(0, 0, 0, 0.822));
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -137,7 +137,7 @@ header.header-active .navbar a {
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%); */
 }
 
 .home h1 {
@@ -155,7 +155,7 @@ header.header-active .navbar a {
 }
 
 .about .row {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -192,7 +192,7 @@ header.header-active .navbar a {
 }
 
 .service {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     text-align: center;
     color: #eee;
     background-color: rgb(7, 7, 7);
@@ -254,7 +254,7 @@ header.header-active .navbar a {
 }
 
 .ot {
-    min-height: 100vh;
+    min-height: 80vh;
     text-align: center;
     background: #333;
     background-color: rgb(7, 7, 7);
@@ -275,7 +275,7 @@ header.header-active .navbar a {
     height: 40rem;
     margin: 1.5rem 1rem;
     width: 27rem;
-    border: .5rem solid var(--blue);
+    /* border: .5rem solid var(--blue); */
     overflow: hidden;
     position: relative;
     box-shadow: 0 .3rem .5rem #000;
@@ -327,12 +327,12 @@ header.header-active .navbar a {
 }
 
 .plan {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     text-align: center;
     background-color: rgb(7, 7, 7);
 }
 
-.plan .heading{
+.plan .heading {
     color: #eee;
 }
 
@@ -344,7 +344,7 @@ header.header-active .navbar a {
 }
 
 .plan .box-container .box {
-    background: rgb(47, 47, 47);
+    background: linear-gradient(rgb(47, 47, 47), rgb(0, 0, 0));
     margin: 2rem;
     width: 30rem;
     box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
@@ -398,9 +398,9 @@ header.header-active .navbar a {
 }
 
 .register {
-    min-height: 90vh;
+    /* min-height: 90vh; */
     text-align: center;
-    background-color: rgb(7, 7, 7);    
+    background-color: rgb(7, 7, 7);
     padding-bottom: 3rem;
 }
 
@@ -456,11 +456,11 @@ textarea:focus {
 }
 
 .footer a {
-    color: var(--blue);
+    color: cornflowerblue;
 }
 
 .footer a:hover {
-    color: #fff;
+    color: rgb(159, 62, 62);
 }
 
 
