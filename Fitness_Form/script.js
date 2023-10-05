@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const fitnessForm = document.getElementById("fitness-form");
+    const fitnessForm = document.getElementById("fitness-form"); // Corrected ID
     const fitnessResults = document.getElementById("fitness-results");
     const nutritionResults = document.getElementById("nutrition-results");
 
     fitnessForm.addEventListener("submit", function (e) {
         e.preventDefault(); // Prevent the default form submission behavior
-
         // Retrieve user input (height, weight, age, gender)
         const height = parseFloat(document.getElementById("height").value);
         const weight = parseFloat(document.getElementById("weight").value);
@@ -17,14 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
         let nutritionPlan = "";
 
         // Add conditions to generate plans based on user input
-        if (age >= 18) {
-            fitnessPlan = `For a ${age}-year-old ${gender} weighing ${weight} kg and ${height} cm tall: Do cardio exercises for 30 minutes daily.`;
-            nutritionPlan = `Nutrition plan for ${weight} kg weight: Consume balanced meals with adequate protein, carbohydrates, and fats.`;
-        } else {
+        if (age < 18) {
             fitnessPlan = "Sorry, fitness plans are only available for adults (age 18 and above).";
             nutritionPlan = "Sorry, nutrition plans are only available for adults (age 18 and above).";
+        } else if (age >= 18 && age < 25 && weight >= 80) {
+            fitnessPlan = `For a ${age}-year-old ${gender} weighing ${weight} kg and ${height} cm tall: Do cardio exercises for 60 minutes daily.
+            Here's a workout you can follow: https://chloeting.com/program/2021/get-fit-challenge`;
+            nutritionPlan = `Nutrition plan for ${weight} kg weight: Consume balanced meals with adequate protein, carbohydrates, and fats.`;
         }
-
         // Display the generated plans on the webpage
         fitnessResults.textContent = fitnessPlan;
         nutritionResults.textContent = nutritionPlan;
