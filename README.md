@@ -11,7 +11,6 @@ Welcome to the README for our Fitness Website project! This repository contains 
 - [Features](#features)
 - [Demo](#demo)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [Improvements](#improvements)
 
 ## About
@@ -32,26 +31,18 @@ Features:
 ## Demo
 
 
-[Demo Link]
+[Demo Link] [https://drive.google.com/file/d/1O-5GASZ_T9PbAh-UOePtwH3rLvm0_xgV/view?usp=sharing]
 
 ## Usage
 Our mission with this project is to create an engaging and informative online space where users can access valuable fitness resources and connect with a community of like-minded individuals. We want to inspire and support individuals in their pursuit of better health and fitness.
 We personally used the knowledge of frontend using html, css, and java script in making of this piece.
 
-## Contributing
-
-``bash
-# Clone the repository
-git clone https://github.com/yourusername/fitness-website.git
-
 ## Improvements
-IMPROVEMENTS:
-Future Enhancements:
 
-Enhanced Nutrition Insights: We plan to provide more in-depth nutritional guidance to help you make healthier food choices.
+- Enhanced Nutrition Insights: We plan to provide more in-depth nutritional guidance to help you make healthier food choices.
 
-Advanced Workout Plans: Look forward to more comprehensive workout routines and exercise tutorials for all fitness levels.
+- Advanced Workout Plans: Look forward to more comprehensive workout routines and exercise tutorials for all fitness levels.
 
-Connect and Communicate with other members:(isme likh lo thodu)
+- Connect and Communicate with other members: We will provide a platform where you can connect with peers with same goals. With back-end tech we'll be able to implement this feature.
 
-We're committed to continuously improving FitPal to ensure you have the best tools and support on your fitness journey. Stay tuned for these exciting updates and more!
+- We're committed to continuously improving FitPal to ensure you have the best tools and support on your fitness journey. Stay tuned for these exciting updates and more!
