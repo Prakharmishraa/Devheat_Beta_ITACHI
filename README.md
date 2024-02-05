@@ -35,6 +35,7 @@ Features:
 
 ## Usage
 Our mission with this project is to create an engaging and informative online space where users can access valuable fitness resources and connect with a community of like-minded individuals. We want to inspire and support individuals in their pursuit of better health and fitness.
+
 We personally used the knowledge of frontend using html, css, and java script in making of this piece.
 
 ## Improvements
